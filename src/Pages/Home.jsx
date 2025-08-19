@@ -3,12 +3,14 @@ import { projects, commits } from "../data/projects";
 import ProjectsCard from "../Components/ProjectsCard";
 import CommitCard from "../Components/CommitCard";
 import FloatingTechIcons from "../Components/FloatingTechIcons";
+import GraduateIDCard from "../Components/GraduateIDCard";
 import "../styles/Home.css";
 
 function Home() {
   return (
     <div className="home-container">
       <FloatingTechIcons />
+      <GraduateIDCard />
       <div className="hero-section">
         <h1 className="hero-title">My SE Factory Journey</h1>
         <p className="hero-subtitle">
@@ -16,6 +18,51 @@ function Home() {
           Engineering program
         </p>
       </div>
+
+      <section className="company-section">
+        <h2 className="section-title">Company & Role</h2>
+        <div className="company-content">
+          <div className="company-info">
+            <h3>SE Factory Full-Stack Software Engineering Bootcamp</h3>
+            <p className="company-description">
+              In Summer 2025, I participated in SE Factory's Full-Stack Software
+              Engineering Bootcamp. This intensive 8-week program provided
+              hands-on experience in backend and frontend development, modern
+              web technologies, and professional collaboration in a fast-paced
+              environment. The bootcamp was hybrid, online and in-person
+              sessions at Beirut Digital District (BDD).
+            </p>
+          </div>
+
+          <div className="activities-info">
+            <h4>Bootcamp Activities</h4>
+            <ul className="activities-list">
+              <li>
+                Actively participated in the 14 week SE Factory Full-Stack
+                Software Engineering program, engaging in daily coding
+                challenges, project sprints, and peer code reviews.
+              </li>
+              <li>
+                Designed, developed, and deployed full-stack web applications
+                using industry-standard technologies and best practices.
+              </li>
+              <li>
+                Wrote clean, maintainable, and well-documented code, ensuring
+                scalability and security for all applications.
+              </li>
+              <li>
+                Integrated RESTful APIs and managed both frontend and backend
+                development, including database schema design and cloud
+                deployment.
+              </li>
+              <li>
+                Used Git & GitHub for version control and collaborative coding,
+                implementing branching strategies and resolving merge conflicts.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
       <section className="journey-section">
         <h2 className="section-title">My Journey</h2>

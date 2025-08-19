@@ -4,19 +4,15 @@ import "../styles/ProjectsCard.css";
 function ProjectsCard({ project }) {
   return (
     <div className="project-card">
-      <div className="project-image-container">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="project-image"
-          onError={(e) => {
-            e.target.src = "/logo192.png"; // Fallback image
-          }}
-        />
-      </div>
       <div className="project-content">
         <h3 className="project-title">{project.title}</h3>
         <p className="project-description">{project.description}</p>
+
+        {project.techStack && (
+          <div className="project-tech-stack">
+            <strong>Tech Stack:</strong> {project.techStack}
+          </div>
+        )}
 
         {project.links ? (
           <div className="project-links">

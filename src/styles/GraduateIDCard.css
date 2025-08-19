@@ -1,0 +1,100 @@
+.graduate-id-card {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  background: #1a1a1a;
+  border: 2px solid #00d4aa;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 212, 170, 0.2);
+  z-index: 1000;
+  font-family: "Inter", sans-serif;
+  transition: transform 0.3s ease;
+}
+
+.graduate-id-card:hover {
+  transform: scale(1.05);
+}
+
+.id-header {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(0, 212, 170, 0.3);
+}
+
+.se-logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #00d4aa;
+  line-height: 1;
+}
+
+.factory-text {
+  font-size: 0.7rem;
+  color: #00d4aa;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.id-content {
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.graduate-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 0.3rem;
+}
+
+.program {
+  font-size: 0.75rem;
+  color: #cccccc;
+  margin-bottom: 0.3rem;
+}
+
+.graduation {
+  font-size: 0.7rem;
+  color: #00d4aa;
+  font-weight: 500;
+}
+
+.id-footer {
+  text-align: center;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(0, 212, 170, 0.3);
+}
+
+.badge {
+  background: #00d4aa;
+  color: #0a0a0a;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .graduate-id-card {
+    width: 160px;
+    top: 15px;
+    right: 15px;
+    padding: 0.8rem;
+  }
+
+  .se-logo {
+    font-size: 1.3rem;
+  }
+
+  .graduate-name {
+    font-size: 0.8rem;
+  }
+
+  .program {
+    font-size: 0.7rem;
+  }
+}

@@ -10,8 +10,9 @@
 
 .floating-icon {
   position: absolute;
+  color: #00d4aa;
   font-size: 4rem;
-  color: rgba(0, 212, 170, 0.5);
+  opacity: 0.7;
   animation: float 6s ease-in-out infinite;
 }
 
@@ -69,4 +70,53 @@
   top: 85%;
   right: 5%;
   animation-delay: 8s;
+}
+
+@media (max-width: 768px) {
+  .floating-icon {
+    font-size: 2.5rem;
+  }
+
+  .floating-icon:nth-child(1) {
+    top: 5%;
+    left: 5%;
+  }
+  .floating-icon:nth-child(2) {
+    top: 15%;
+    right: 10%;
+  }
+  .floating-icon:nth-child(3) {
+    top: 50%;
+    left: 3%;
+  }
+  .floating-icon:nth-child(4) {
+    top: 35%;
+    right: 8%;
+  }
+  .floating-icon:nth-child(5) {
+    top: 75%;
+    left: 15%;
+  }
+  .floating-icon:nth-child(6) {
+    top: 10%;
+    left: 55%;
+  }
+  .floating-icon:nth-child(7) {
+    top: 65%;
+    right: 15%;
+  }
+  .floating-icon:nth-child(8) {
+    top: 25%;
+    left: 75%;
+  }
+  .floating-icon:nth-child(9) {
+    top: 80%;
+    right: 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .floating-icon {
+    font-size: 2rem;
+  }
 }

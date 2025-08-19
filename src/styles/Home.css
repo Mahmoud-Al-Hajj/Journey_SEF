@@ -97,6 +97,84 @@
   z-index: 2;
 }
 
+.company-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.company-content {
+  background: #1a1a1a;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(0, 212, 170, 0.1);
+  position: relative;
+}
+
+.company-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #00d4aa, #00b894);
+  border-radius: 16px 16px 0 0;
+}
+
+.company-info h3 {
+  color: #00d4aa;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.company-description {
+  color: #e0e0e0;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.activities-info h4 {
+  color: #00d4aa;
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.activities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activities-list li {
+  color: #e0e0e0;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.activities-list li::before {
+  content: "▸";
+  color: #00d4aa;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.activities-list li:last-child {
+  margin-bottom: 0;
+}
+
 .journey-section {
   max-width: 1000px;
   margin: 0 auto;
@@ -334,10 +412,12 @@
 @media (max-width: 768px) {
   .hero-title {
     font-size: 2.5rem;
+    letter-spacing: -1px;
   }
 
   .hero-subtitle {
     font-size: 1.1rem;
+    max-width: 100%;
   }
 
   .section-title {
@@ -349,13 +429,19 @@
     gap: 1.5rem;
   }
 
+  .commits-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .hero-section {
     padding: 6rem 1rem 4rem;
   }
 
   .projects-section,
   .about-section,
-  .journey-section {
+  .journey-section,
+  .commits-section {
     padding: 0 1rem 3rem;
   }
 
@@ -367,30 +453,129 @@
     font-size: 1rem;
   }
 
+  /* Simple Mobile Timeline */
   .timeline::before {
-    left: 20px;
+    display: none;
   }
 
   .timeline-item {
-    flex-direction: row !important;
-    margin-left: 40px;
+    flex-direction: column !important;
+    margin-left: 0 !important;
+    margin-bottom: 2rem;
   }
 
   .timeline-dot {
-    left: 20px;
-    transform: translateX(-50%);
+    display: none;
   }
 
   .timeline-content {
-    width: calc(100% - 60px);
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 1.5rem;
   }
 
   .timeline-content::before {
-    left: -16px !important;
-    right: auto !important;
-    border-right-color: #1a1a1a !important;
-    border-left-color: transparent !important;
+    display: none;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-content li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .timeline-image {
+    max-height: 120px;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-image img {
+    height: 120px;
+  }
+
+  .company-section {
+    padding: 0 1rem 3rem;
+  }
+
+  .company-content {
+    padding: 2rem;
+  }
+
+  .company-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .company-description,
+  .duration-info p,
+  .activities-list li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-section {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .projects-section,
+  .about-section,
+  .journey-section,
+  .commits-section {
+    padding: 0 0.8rem 2rem;
+  }
+
+  .about-content {
+    padding: 1.5rem;
+  }
+
+  .company-content {
+    padding: 1.5rem;
+  }
+
+  .timeline-content {
+    padding: 1rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+  }
+
+  .timeline-content li {
+    font-size: 0.85rem;
+  }
+
+  .timeline-image {
+    max-height: 80px;
+  }
+
+  .timeline-image img {
+    height: 80px;
+  }
+
+  .company-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .company-description,
+  .duration-info p,
+  .activities-list li {
+    font-size: 0.9rem;
   }
 }
