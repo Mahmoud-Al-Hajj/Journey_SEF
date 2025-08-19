@@ -1,0 +1,112 @@
+.project-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 212, 170, 0.15);
+  border-color: rgba(0, 212, 170, 0.2);
+}
+
+.project-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background: #2a2a2a;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  margin: 0 0 0.75rem 0;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  line-height: 1.3;
+}
+
+.project-description {
+  margin: 0 0 1.25rem 0;
+  color: #a0a0a0;
+  line-height: 1.5;
+  flex-grow: 1;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.project-link {
+  color: #00d4aa;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.project-link:hover {
+  color: #00b894;
+}
+
+.project-link:hover::after {
+  transform: translateX(3px);
+}
+
+.project-links {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.project-links .project-link {
+  font-size: 0.8rem;
+  padding: 0.25rem 0;
+}
+
+@media (max-width: 768px) {
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-title {
+    font-size: 1.15rem;
+  }
+
+  .project-description {
+    font-size: 0.85rem;
+  }
+
+  .project-image-container {
+    height: 180px;
+  }
+}
