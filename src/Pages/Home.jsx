@@ -10,12 +10,12 @@ function Home() {
   return (
     <div className="home-container">
       <FloatingTechIcons />
-      <GraduateIDCard />
       <div className="hero-section">
+        <GraduateIDCard />
         <h1 className="hero-title">My SE Factory Journey</h1>
         <p className="hero-subtitle">
-          Documenting my growth through the SE Factory Full Stack Sof
-          Engineering program
+          Documenting my growth through the SE Factory Full-Stack Engineering
+          program
         </p>
       </div>
 
